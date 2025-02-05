@@ -55131,15 +55131,14 @@ return B.c.au(r,s)},
 $S:335}
 A.yw.prototype={
 O(a){var s=null
-return new A.pG(B.Cq,"Flutter Demo",A.a2W(s,A.a4Q(B.M,s,s,B.Ch),!0),s)}}
+return new A.pG(B.Cq,"Tradr",A.a2W(s,A.a4Q(B.M,s,s,B.Ch),!0),s)}}
 A.pT.prototype={
 ah(){return new A.tK()}}
 A.tK.prototype={
 Pc(){this.aG(new A.YZ(this))},
 O(a){var s=null,r=A.aE(a).ax,q=r.y2
 r=q==null?r.c:q
-this.a.toString
-q=A.a7z("Flutter Demo Home Page",s)
+q=A.a7z("Start of something new",s)
 return new A.qV(new A.nR(q,r,new A.F_(s,s,1/0,56),s),A.Jm(A.add(A.a([B.KP,A.a7z(""+this.d,A.aE(a).p2.e)],t.nA),B.oN),s,s),A.aek(B.yR,!1,this.gPb(),"Increment"),s)}}
 A.YZ.prototype={
 $0(){++this.a.d},
