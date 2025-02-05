@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
   <base href="/tradrweb/">
-
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="Tradr Dashboard">
@@ -19,8 +17,74 @@
 
   <title>Tradr</title>
   <link rel="manifest" href="manifest.json">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #101416;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .loader-container {
+      position: relative;
+      width: 160px;
+      height: 160px;
+    }
+
+    .app-icon {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 20px;
+      z-index: 2;
+    }
+
+    .spinner {
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      border: 8px solid rgba(230, 220, 125, 0.1);
+      border-top: 8px solid #E6DC7D;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    #flutter-target {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+<div class="loader-container">
+  <img src="app_icon.png" class="app-icon" alt="App Icon">
+  <div class="spinner"></div>
+</div>
+
+<script>
+  window.addEventListener('load', function() {
+    const script = document.createElement('script');
+    script.src = 'flutter_bootstrap.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    // Hide loader when Flutter web is initialized
+    window.addEventListener('flutter-first-frame', function() {
+      document.querySelector('.loader-container').style.display = 'none';
+    });
+  });
+</script>
 </body>
 </html>
