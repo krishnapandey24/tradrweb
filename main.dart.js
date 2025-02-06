@@ -24053,12 +24053,13 @@ a1q:function a1q(a){this.a=a},
 a1s:function a1s(a){this.a=a},
 a1p:function a1p(a){this.a=a},
 Lv:function Lv(a){this.a=a},
-tq:function tq(a,b,c,d,e){var _=this
+tq:function tq(a,b,c,d,e,f){var _=this
 _.c=a
 _.d=b
 _.e=c
 _.f=d
-_.a=e},
+_.r=e
+_.a=f},
 Bd:function Bd(a,b){this.c=a
 this.a=b},
 KQ:function KQ(a,b,c,d,e,f,g,h,i,j){var _=this
@@ -82068,7 +82069,7 @@ B.b.E(r,new A.Z(q,new A.a1g(this),A.O(q).i("Z<1,i>")))
 return new A.Hl(B.l,A.jR(r,B.az,B.aS),s)}}
 A.a1g.prototype={
 $1(a){var s=this.a
-return new A.bO(B.em,new A.tq(s.c===a.c,a.a,a.b,new A.a1f(s,a),null),null)},
+return new A.bO(B.em,new A.tq(s.c===a.c,a.a,a.b,!0,new A.a1f(s,a),null),null)},
 $S:472}
 A.a1f.prototype={
 $0(){return this.a.d.$1(this.b.c)},
@@ -82090,7 +82091,7 @@ return new A.L9(A.b([new A.zC(r,B.Ww,B.bw),new A.zC(A.M6("assets/icons/report.sv
 a2u(){var s=this,r=null,q=t.D,p=A.b([B.Qr,A.Is(!1,!0,B.WN,r,!0,r,r,r,r,r,r,r,r,r,r,new A.a1h(s),r,r,r,r,r,r),B.QF],q),o=s.c
 o.toString
 if(!(A.bn(o,B.cl,t.w).w.a.a<=600)){o=s.f
-B.b.E(p,A.b([new A.tq(o===0,"home","DASHBOARD",new A.a1i(s),r),B.f5,new A.tq(o===1,"report","Reports",new A.a1j(s),r)],q))}p.push(B.f5)
+B.b.E(p,A.b([new A.tq(o===0,"home","DASHBOARD",!1,new A.a1i(s),r),B.f5,new A.tq(o===1,"report","Reports",!1,new A.a1j(s),r)],q))}p.push(B.f5)
 p.push(B.OH)
 p.push(B.f5)
 p.push(B.Hz)
@@ -82167,9 +82168,9 @@ M(a){var s,r=this,q=null,p=r.c,o=p?B.e6:q,n=A.jK(16),m=p?B.bw:B.j
 m=A.b([new A.bO(B.nj,A.M6("assets/icons/"+r.d+".svg",new A.lI(m,B.cn,q,B.e1),16,16),q)],t.D)
 s=t.w
 A.vm("here  "+A.e(A.bn(a,B.cl,s).w.a.a))
-if(A.bn(a,B.cl,s).w.a.a>=800||p)m.push(A.dB(r.e,q,q,q,A.ei(q,q,p?B.bw:B.j,q,q,q,q,q,q,q,q,11,q,q,B.aL,q,q,!0,q,q,q,q,q,q,q,q),q,q))
+if(A.bn(a,B.cl,s).w.a.a>=800||r.f||p)m.push(A.dB(r.e,q,q,q,A.ei(q,q,p?B.bw:B.j,q,q,q,q,q,q,q,q,11,q,q,B.aL,q,q,!0,q,q,q,q,q,q,q,q),q,q))
 m.push(B.Qu)
-return A.Is(!1,!0,A.eF(q,A.jh(m,B.aA,B.aE,B.bB,q),B.y,q,q,new A.cU(o,q,q,n,q,q,B.ae),q,q,B.GO,q),q,!0,q,q,q,q,q,q,q,q,q,q,r.f,q,q,q,q,q,q)}}
+return A.Is(!1,!0,A.eF(q,A.jh(m,B.aA,B.aE,B.bB,q),B.y,q,q,new A.cU(o,q,q,n,q,q,B.ae),q,q,B.GO,q),q,!0,q,q,q,q,q,q,q,q,q,q,r.r,q,q,q,q,q,q)}}
 A.Bd.prototype={
 M(a){var s=this.c,r=s?30:20,q=s?80:65
 return A.jh(A.b([A.asF("assets/images/rupee.png",r,r),A.asF("assets/images/logotradr_new.png",q,q)],t.D),B.aA,B.aE,B.bB,null)}}
